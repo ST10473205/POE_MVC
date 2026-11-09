@@ -1,0 +1,47 @@
+﻿@model POE_MVC.Models.EventViewModel
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                {
+                    <img src="@Model.ImageUrl" class="card-img-top" alt="Event Banner" style="height: 350px; object-fit: cover;" />
+                }
+                <!-- Fixed class name: card-body instead of card body -->
+                <div class="card-body">
+                    <h2 class="card-title text-primary">@Model.Title</h2>
+                    <p class="lead text-secondary">@Model.Description</p>
+                    <hr />
+                    <ul class="list-group-flush mb-4">
+                        <li class="list-group-item"><strong>Date:</strong> @Model.EventDate.ToString("yyyy-MM-dd")</li>
+                        <li class="list-group-item"><strong>Location:</strong> @Model.Location</li>
+                        <li class="list-group-item"><strong>Distance:</strong> @Model.DistanceKm km</li>
+                    </ul>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a asp-action="Index" class="btn btn-secondary">Back to Catalog</a>
+
+                        @if (Context.Session.GetString("Role") == "Participant")
+                        {
+                            @if (Model.IsEnrolled)
+                            {
+                                <span class="badge bg-success p-2 fs-6">✓ You are Enrolled</span>
+                            }
+                            else
+                            {
+                                <!-- Ensure asp-action matches your controller method name (e.g., Enrol or Register) -->
+                                <form asp-action="Enrol" asp-route-id="@Model.Id" method="post" class="mb-0">
+                                    <button type="submit" class="btn btn-success">Register / Enrol for Event</button>
+                                </form>
+                            }
+                        }
+                    </div> <!-- Removed stray closing parenthesis here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

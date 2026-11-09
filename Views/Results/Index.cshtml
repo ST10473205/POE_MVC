@@ -1,0 +1,36 @@
+﻿@model IEnumerable<POE_MVC.Models.ParticipantResultDto>
+
+<div class="container mt-4">
+    <h2>My Race History & Results</h2>
+    <hr />
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">No completed race results found yet. Keep participating!</div>
+    }
+    else
+    {
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Finish Time</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var res in Model)
+                {
+                    <tr>
+                        <td><strong>@res.EventName</strong></td>
+                        <td>@res.EventDate.ToString("yyyy-MM-dd")</td>
+                        <td>@res.CategoryName</td>
+                        <td><span class="badge bg-success">@res.FinishTime</span></td>
+                        <td>@res.Position<text>th out of</text> @res.TotalFinishers <text>finishers</text></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
