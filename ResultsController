@@ -1,0 +1,13 @@
+ResultsController.cs
+Purpose: Manages participant results.
+### ResultsController
+
+The ResultsController manages the display
+of event results.
+
+It allows participants to view their
+performance information, including their
+finishing positions and recorded times.
+
+It retrieves result information through
+the API and displays it on the website.
