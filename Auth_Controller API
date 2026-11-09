@@ -1,0 +1,15 @@
+These controllers handle requests, communicate with the database and return responses.
+
+1.1 AuthController.cs
+Purpose: Handles user authentication, including registration, login and logout.
+
+Add this explanation to your README:
+### AuthController
+
+The AuthController manages user authentication.
+It allows new users to register as organisers or
+participants. It also handles login by checking
+user credentials and creating a session.
+
+The controller supports logout by clearing the
+current user's session.
