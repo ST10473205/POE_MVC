@@ -1,0 +1,13 @@
+EventsController.cs
+Purpose: Manages event-related website pages.
+### EventsController
+
+The EventsController manages event-related
+activities on the website.
+
+It allows users to view available events,
+view event details and access event creation
+and enrolment pages.
+
+It communicates with the API to retrieve
+and submit event information.
