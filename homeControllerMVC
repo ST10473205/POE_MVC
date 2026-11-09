@@ -1,0 +1,12 @@
+HomeController.cs
+Purpose: Controls the main website pages.
+### HomeController
+
+The HomeController manages the main pages
+of the MVC application.
+
+It provides access to the home page and
+other general website pages.
+
+It acts as the starting point for users
+when accessing the website.
