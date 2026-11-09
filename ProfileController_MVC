@@ -1,0 +1,13 @@
+ProfileController.cs
+Purpose: Manages user profile pages.
+### ProfileController
+
+The ProfileController manages user profile
+activities.
+
+It allows logged-in users to view their
+profile information and access profile
+updates.
+
+It communicates with the API to retrieve
+and update user information.
