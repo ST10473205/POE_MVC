@@ -1,0 +1,12 @@
+AccountController.cs
+Purpose: Manages login and account-related pages.
+### AccountController
+
+The AccountController manages user account
+activities on the website.
+
+It handles the login page and communicates
+with the API to authenticate users.
+
+It allows users to access the system using
+their registered account details.
