@@ -1,0 +1,10 @@
+.3 ParticipantsController.cs
+Purpose: Manages participant information.
+### ParticipantsController
+
+The ParticipantsController handles participant
+information. It allows participant details to
+be retrieved and managed.
+
+It supports the participant side of the event
+management system.
