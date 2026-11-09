@@ -1,0 +1,11 @@
+1.2 OrganisersController.cs
+Purpose: Handles organiser-related operations.
+### OrganisersController
+
+The OrganisersController manages organiser
+information. It allows the system to retrieve
+organiser details and supports organiser-related
+operations.
+
+It helps ensure that organiser information is
+managed separately from participant information.
